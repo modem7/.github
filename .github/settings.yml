@@ -1,0 +1,62 @@
+# https://github.com/apps/settings
+# https://github.com/repository-settings/app
+#
+# This is the account-wide defaults repo. Any repo without its own
+# .github/settings.yml automatically inherits this file. A repo that has
+# its own settings.yml needs `_extends: .github` at the top to merge with
+# this instead of replacing it entirely — see docs/configuration.md in
+# repository-settings/app for the exact merge rules (label arrays merge by
+# `name`; other keys do not auto-merge, so per-repo files should keep any
+# repo-specific `repository:` fields like name/description/topics local).
+#
+# Deliberately no `repository.name` / `description` / `homepage` / `topics`
+# / `private` here — those are per-repo and must never be silently
+# overwritten by this default.
+
+repository:
+  has_issues: true
+  has_wiki: false
+  has_downloads: true
+  has_projects: false
+  has_discussions: false
+  default_branch: master
+  allow_squash_merge: true
+  allow_rebase_merge: true
+  allow_merge_commit: true
+  delete_branch_on_merge: true
+  allow_update_branch: true
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: bug
+    color: d73a4a
+    description: "Something isn't working"
+  - name: dependencies
+    color: C62109
+    description: "Pull requests that update a dependency file"
+  - name: documentation
+    color: "0075ca"
+    description: "Improvements or additions to documentation"
+  - name: duplicate
+    color: cfd3d7
+    description: "This issue or pull request already exists"
+  - name: enhancement
+    color: a2eeef
+    description: "New feature or request"
+  - name: good first issue
+    color: "7057ff"
+    description: "Good for newcomers"
+  - name: help wanted
+    color: "008672"
+    description: "Extra attention is needed"
+  - name: invalid
+    color: e4e669
+    description: "This doesn't seem right"
+  - name: question
+    color: d876e3
+    description: "Further information is requested"
+  - name: wontfix
+    color: ffffff
+    description: "This will not be worked on"
